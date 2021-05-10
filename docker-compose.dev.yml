@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: heisln-rabbitmq
+    build:
+      context: .
+    networks:
+      - heisln-net
+    container_name: rabbitmq
+    ports:
+      - 15672:15672
+      - 5672:5672
+    environment:
+      - RABBITMQ_USER=test
+      - RABBITMQ_PASSWORD=test
+  
+networks:
+  heisln-net:
+    external: true
