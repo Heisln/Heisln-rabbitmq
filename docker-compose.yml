@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  heisln-rabbitmq:
-    image: ${DOCKER_REGISTRY-}rabbitmq
+  rabbitmq:
+    image: heisln-rabbitmq
     build:
       context: .
     networks:
