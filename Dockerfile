@@ -7,7 +7,7 @@ ENV RABBITMQ_USER1 test1
 ENV RABBITMQ_PASSWORD1 test1
 ENV RABBITMQ_PID_FILE /var/lib/rabbitmq/mnesia/rabbitmq
 
-COPY RabbitMq/init.sh /init.sh
+COPY init.sh /init.sh
 RUN chmod +x /init.sh
 
 # Define default command
